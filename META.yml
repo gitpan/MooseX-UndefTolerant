@@ -19,7 +19,8 @@ no_index:
     - inc
     - t
 requires:
-  Moose: 0
+  Moose: 0.89
+  Moose::Exporter: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.02
+version: 0.03
