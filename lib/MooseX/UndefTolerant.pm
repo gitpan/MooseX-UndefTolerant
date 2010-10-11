@@ -4,11 +4,15 @@ use Moose qw();
 use Moose::Exporter;
 
 use MooseX::UndefTolerant::Attribute;
+use MooseX::UndefTolerant::Constructor;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 Moose::Exporter->setup_import_methods(
-    class_metaroles => { attribute => [ 'MooseX::UndefTolerant::Attribute' ] }
+    class_metaroles => { 
+           attribute => [ 'MooseX::UndefTolerant::Attribute' ],
+           constructor => [ 'MooseX::UndefTolerant::Constructor' ],
+    }
 );
 
 1;
@@ -17,7 +21,7 @@ __END__
 
 =head1 NAME
 
-MooseX::UndefTolerant - Make your attribute(s) tolerant to undef intitialization
+MooseX::UndefTolerant - Make your attribute(s) tolerant to undef initialization
 
 =head1 SYNOPSIS
 
@@ -82,9 +86,9 @@ Maybe[Str] and I still want my predicate (C<has_foo>) to work.  The only
 real solution was:
 
   if(defined($foo)) {
-    $class = My:CLass->new(foo => $foo, bar => 123);
+    $class = My:Class->new(foo => $foo, bar => 123);
   } else {
-    $class = My:CLass->new(bar => 123);
+    $class = My:Class->new(bar => 123);
   }
 
 Or some type of codemulch using ternarys.  This module allows you to make
@@ -92,6 +96,8 @@ your attributes more tolerant of undef so that you can keep the first
 example: have your cake and eat it too!
 
 =head1 PER ATTRIBUTE
+
+See L<MooseX::UndefTolerant::Attribute>.
 
 =head1 AUTHOR
 
