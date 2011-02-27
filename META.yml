@@ -1,14 +1,15 @@
 ---
 abstract: 'Make your attribute(s) tolerant to undef initialization'
 author:
+  - 'Cory G Watson, C<< <gphat at cpan.org> >>'
   - 'Cory G Watson <gphat@cpan.org>'
 build_requires:
   ExtUtils::MakeMaker: 6.42
-  Test::More: 0
+  Test::More: 0.002
 configure_requires:
   ExtUtils::MakeMaker: 6.42
 distribution_type: module
-generated_by: 'Module::Install version 0.94'
+generated_by: 'Module::Install version 1.00'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -23,4 +24,4 @@ requires:
   Moose::Exporter: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.06
+version: 0.08
