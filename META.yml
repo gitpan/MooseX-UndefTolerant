@@ -5,6 +5,7 @@ author:
   - 'Cory G Watson <gphat@cpan.org>'
 build_requires:
   ExtUtils::MakeMaker: 6.42
+  Test::Fatal: 0
   Test::More: 0.002
 configure_requires:
   ExtUtils::MakeMaker: 6.42
@@ -24,4 +25,4 @@ requires:
   Moose::Exporter: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.08
+version: 0.09
