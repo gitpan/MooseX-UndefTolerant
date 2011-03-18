@@ -1,4 +1,7 @@
 package MooseX::UndefTolerant;
+BEGIN {
+  $MooseX::UndefTolerant::VERSION = '0.10';
+}
 
 use Moose qw();
 use Moose::Exporter;
@@ -7,7 +10,6 @@ use MooseX::UndefTolerant::Attribute;
 use MooseX::UndefTolerant::Class;
 use MooseX::UndefTolerant::Constructor;
 
-our $VERSION = '0.09';
 
 my %metaroles = ( attribute => [ 'MooseX::UndefTolerant::Attribute' ] );
 if ( $Moose::VERSION < 1.9900 ) {
@@ -24,11 +26,19 @@ Moose::Exporter->setup_import_methods(
 
 1;
 
-__END__
+# ABSTRACT: Make your attribute(s) tolerant to undef initialization
+
+
+
+=pod
 
 =head1 NAME
 
 MooseX::UndefTolerant - Make your attribute(s) tolerant to undef initialization
+
+=head1 VERSION
+
+version 0.10
 
 =head1 SYNOPSIS
 
@@ -69,6 +79,14 @@ Loading this module in your L<Moose> class makes initialization of your
 attributes tolerant of undef.  If you specify the value of undef to any of
 the attributes they will not be initialized, effectively behaving as if you
 had not provided a value at all.
+
+You can also apply the 'UndefTolerant' trait to individual attributes. See See
+L<MooseX::UndefTolerant::Attribute> for details.
+
+There will be no change in behaviour to any attribute with a type constraint
+that accepts undef values (for example C<Maybe> types), as it is presumed that
+since the type is already "undef tolerant", there is no need to avoid
+initializing the attribute value with C<undef>.
 
 =head1 MOTIVATION
 
@@ -114,10 +132,6 @@ inlined constructor initialization code currently lives in
 L<Moose::Meta::Method::Constructor>, not L<Moose::Meta::Attribute>. The good
 news is that this is expected to be changing shortly.
 
-=head1 AUTHOR
-
-Cory G Watson, C<< <gphat at cpan.org> >>
-
 =head1 ACKNOWLEDGEMENTS
 
 Many thanks to the crew in #moose who talked me through this module:
@@ -134,14 +148,19 @@ Jay Shirley (jshirley)
 
 Mike Eldridge (diz)
 
-=head1 COPYRIGHT & LICENSE
+=head1 AUTHOR
 
-Copyright 2009 Cory G Watson.
+Cory G Watson <gphat at cpan.org>
 
-This program is free software; you can redistribute it and/or modify it
-under the terms of either: the GNU General Public License as published
-by the Free Software Foundation; or the Artistic License.
+=head1 COPYRIGHT AND LICENSE
 
-See http://dev.perl.org/licenses/ for more information.
+This software is copyright (c) 2011 by Cory G Watson.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
+
+
+__END__
+

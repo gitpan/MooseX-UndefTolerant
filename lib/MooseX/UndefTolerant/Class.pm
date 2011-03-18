@@ -1,4 +1,7 @@
 package MooseX::UndefTolerant::Class;
+BEGIN {
+  $MooseX::UndefTolerant::Class::VERSION = '0.10';
+}
 use Moose::Role;
 
 if ( $Moose::VERSION >= 1.9900 ) {
