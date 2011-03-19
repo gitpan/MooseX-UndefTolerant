@@ -1,6 +1,6 @@
 package MooseX::UndefTolerant;
 BEGIN {
-  $MooseX::UndefTolerant::VERSION = '0.10';
+  $MooseX::UndefTolerant::VERSION = '0.11';
 }
 
 use Moose qw();
@@ -38,7 +38,7 @@ MooseX::UndefTolerant - Make your attribute(s) tolerant to undef initialization
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 SYNOPSIS
 
@@ -80,7 +80,7 @@ attributes tolerant of undef.  If you specify the value of undef to any of
 the attributes they will not be initialized, effectively behaving as if you
 had not provided a value at all.
 
-You can also apply the 'UndefTolerant' trait to individual attributes. See See
+You can also apply the 'UndefTolerant' trait to individual attributes. See
 L<MooseX::UndefTolerant::Attribute> for details.
 
 There will be no change in behaviour to any attribute with a type constraint
@@ -116,8 +116,8 @@ real solution was:
     $class = My:Class->new(bar => 123);
   }
 
-Or some type of codemulch using ternarys.  This module allows you to make
-your attributes more tolerant of undef so that you can keep the first
+Or some type of codemulch using ternary conditionals.  This module allows you
+to make your attributes more tolerant of undef so that you can keep the first
 example: have your cake and eat it too!
 
 =head1 PER ATTRIBUTE

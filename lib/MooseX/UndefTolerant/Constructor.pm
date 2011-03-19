@@ -1,6 +1,6 @@
 package MooseX::UndefTolerant::Constructor;
 BEGIN {
-  $MooseX::UndefTolerant::Constructor::VERSION = '0.10';
+  $MooseX::UndefTolerant::Constructor::VERSION = '0.11';
 }
 use Moose::Role;
 
@@ -31,7 +31,8 @@ if ( $Moose::VERSION < 1.9900 ) {
         }
 
         return $self->$orig(@_);
-});
+    });
+}
 
 no Moose::Role;
 1;

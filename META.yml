@@ -19,4 +19,4 @@ requires:
 resources:
   bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=MooseX-UndefTolerant
   repository: git://git.moose.perl.org/MooseX-UndefTolerant.git
-version: 0.10
+version: 0.11
