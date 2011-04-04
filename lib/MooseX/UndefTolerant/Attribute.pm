@@ -1,6 +1,6 @@
 package MooseX::UndefTolerant::Attribute;
 BEGIN {
-  $MooseX::UndefTolerant::Attribute::VERSION = '0.11';
+  $MooseX::UndefTolerant::Attribute::VERSION = '0.12';
 }
 use Moose::Role;
 
@@ -41,7 +41,7 @@ MooseX::UndefTolerant::Attribute - Make your attribute(s) tolerant to undef inti
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 SYNOPSIS
 

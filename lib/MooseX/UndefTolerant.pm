@@ -1,6 +1,6 @@
 package MooseX::UndefTolerant;
 BEGIN {
-  $MooseX::UndefTolerant::VERSION = '0.11';
+  $MooseX::UndefTolerant::VERSION = '0.12';
 }
 
 use Moose qw();
@@ -11,18 +11,38 @@ use MooseX::UndefTolerant::Class;
 use MooseX::UndefTolerant::Constructor;
 
 
-my %metaroles = ( attribute => [ 'MooseX::UndefTolerant::Attribute' ] );
+my %metaroles = (
+    class_metaroles => {
+        attribute => [ 'MooseX::UndefTolerant::Attribute' ],
+    }
+);
 if ( $Moose::VERSION < 1.9900 ) {
-        $metaroles{constructor} = [ 'MooseX::UndefTolerant::Constructor' ];
+    $metaroles{class_metaroles}{constructor} = [
+        'MooseX::UndefTolerant::Constructor',
+    ];
 }
 else {
-        $metaroles{class} = [ 'MooseX::UndefTolerant::Class' ];
+    $metaroles{class_metaroles}{class} = [
+        'MooseX::UndefTolerant::Class',
+    ];
+    $metaroles{role_metaroles} = {
+        applied_attribute => [
+            'MooseX::UndefTolerant::Attribute',
+        ],
+        role => [
+            'MooseX::UndefTolerant::Role',
+        ],
+        application_to_class => [
+            'MooseX::UndefTolerant::ApplicationToClass',
+        ],
+        application_to_role => [
+            'MooseX::UndefTolerant::ApplicationToRole',
+        ],
+    };
 }
 
 
-Moose::Exporter->setup_import_methods(
-    class_metaroles => \%metaroles,
-);
+Moose::Exporter->setup_import_methods(%metaroles);
 
 1;
 
@@ -38,7 +58,7 @@ MooseX::UndefTolerant - Make your attribute(s) tolerant to undef initialization
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 SYNOPSIS
 
@@ -87,6 +107,9 @@ There will be no change in behaviour to any attribute with a type constraint
 that accepts undef values (for example C<Maybe> types), as it is presumed that
 since the type is already "undef tolerant", there is no need to avoid
 initializing the attribute value with C<undef>.
+
+As of Moose 1.9900, this module can also be used in a role, in which case all
+of that role's attributes will be undef-tolerant.
 
 =head1 MOTIVATION
 
