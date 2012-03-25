@@ -1,6 +1,6 @@
 package MooseX::UndefTolerant::ApplicationToRole;
-BEGIN {
-  $MooseX::UndefTolerant::ApplicationToRole::VERSION = '0.12';
+{
+  $MooseX::UndefTolerant::ApplicationToRole::VERSION = '0.13';
 }
 use Moose::Role;
 

@@ -1,25 +1,25 @@
 package MooseX::UndefTolerant::Attribute;
-BEGIN {
-  $MooseX::UndefTolerant::Attribute::VERSION = '0.12';
+{
+  $MooseX::UndefTolerant::Attribute::VERSION = '0.13';
 }
 use Moose::Role;
 
 around('initialize_instance_slot', sub {
     my $orig = shift;
     my $self = shift;
+    my ($meta_instance, $instance, $params) = @_;
 
     my $key_name = $self->init_arg;
 
-    # $_[2] is the hashref of options passed to the constructor.
-    # If our parameter passed in was undef, pop it off the args...
+    # If our parameter passed in was undef, remove it from the parameter list...
     # but leave the value unscathed if the attribute's type constraint can
     # handle undef (or doesn't have one, which implicitly means it can)
-    if (not defined $key_name or not defined($_[2]->{$key_name}))
+    if (not defined $key_name or not defined($params->{$key_name}))
     {
         my $type_constraint = $self->type_constraint;
         if ($type_constraint and not $type_constraint->check(undef))
         {
-            pop;
+            delete $params->{$key_name};
         }
     }
 
@@ -41,7 +41,7 @@ MooseX::UndefTolerant::Attribute - Make your attribute(s) tolerant to undef inti
 
 =head1 VERSION
 
-version 0.12
+version 0.13
 
 =head1 SYNOPSIS
 

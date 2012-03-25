@@ -4,30 +4,31 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Make your attribute(s) tolerant to undef initialization',
-  'AUTHOR' => 'Cory G Watson <gphat at cpan.org>',
-  'BUILD_REQUIRES' => {
-    'Test::Fatal' => '0',
-    'Test::More' => '0.002'
+  "ABSTRACT" => "Make your attribute(s) tolerant to undef initialization",
+  "AUTHOR" => "Cory G Watson <gphat at cpan.org>",
+  "BUILD_REQUIRES" => {
+    "Test::Fatal" => 0,
+    "Test::Moose" => 0,
+    "Test::More" => "0.002"
   },
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'MooseX-UndefTolerant',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'MooseX::UndefTolerant',
-  'PREREQ_PM' => {
-    'Moose' => '0.89'
+  "DISTNAME" => "MooseX-UndefTolerant",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "MooseX::UndefTolerant",
+  "PREREQ_PM" => {
+    "Moose" => "0.89"
   },
-  'VERSION' => '0.12',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "0.13",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 

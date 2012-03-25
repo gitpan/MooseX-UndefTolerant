@@ -1,7 +1,10 @@
 package MooseX::UndefTolerant;
-BEGIN {
-  $MooseX::UndefTolerant::VERSION = '0.12';
+{
+  $MooseX::UndefTolerant::VERSION = '0.13';
 }
+
+use strict;
+use warnings;
 
 use Moose qw();
 use Moose::Exporter;
@@ -58,7 +61,7 @@ MooseX::UndefTolerant - Make your attribute(s) tolerant to undef initialization
 
 =head1 VERSION
 
-version 0.12
+version 0.13
 
 =head1 SYNOPSIS
 
@@ -152,8 +155,8 @@ See L<MooseX::UndefTolerant::Attribute>.
 This extension does not currently work in immutable classes when applying the
 trait to some (but not all) attributes in the class. This is because the
 inlined constructor initialization code currently lives in
-L<Moose::Meta::Method::Constructor>, not L<Moose::Meta::Attribute>. The good
-news is that this is expected to be changing shortly.
+L<Moose::Meta::Class>, not L<Moose::Meta::Attribute>. The good news is that
+this is expected to be changing shortly.
 
 =head1 ACKNOWLEDGEMENTS
 

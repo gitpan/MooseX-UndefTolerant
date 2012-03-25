@@ -2,12 +2,12 @@ Changes
 INSTALL
 LICENSE
 MANIFEST
+MANIFEST.SKIP
 META.json
 META.yml
 Makefile.PL
 README
 dist.ini
-ignore.txt
 lib/MooseX/UndefTolerant.pm
 lib/MooseX/UndefTolerant/ApplicationToClass.pm
 lib/MooseX/UndefTolerant/ApplicationToRole.pm
@@ -17,9 +17,10 @@ lib/MooseX/UndefTolerant/Composite.pm
 lib/MooseX/UndefTolerant/Constructor.pm
 lib/MooseX/UndefTolerant/Role.pm
 t/00-load.t
+t/basic.t
 t/constructor.t
 t/defaults.t
-t/immutable.t
+t/lib/ConstructorTests.pm
 t/release-eol.t
 t/release-no-tabs.t
 t/release-pod-syntax.t

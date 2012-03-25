@@ -4,7 +4,7 @@
       "Cory G Watson <gphat at cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.110580",
+   "generated_by" : "Dist::Zilla version 4.300009, CPAN::Meta::Converter version 2.120630",
    "license" : [
       "perl_5"
    ],
@@ -14,20 +14,21 @@
    },
    "name" : "MooseX-UndefTolerant",
    "prereqs" : {
-      "build" : {
-         "requires" : {
-            "Test::Fatal" : 0,
-            "Test::More" : "0.002"
-         }
-      },
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.31"
+            "ExtUtils::MakeMaker" : "6.30"
          }
       },
       "runtime" : {
          "requires" : {
             "Moose" : "0.89"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::Fatal" : "0",
+            "Test::Moose" : "0",
+            "Test::More" : "0.002"
          }
       }
    },
@@ -43,6 +44,6 @@
          "web" : "http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=gitmo/MooseX-UndefTolerant.git;a=summary"
       }
    },
-   "version" : "0.12"
+   "version" : "0.13"
 }
 
