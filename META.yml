@@ -3,7 +3,6 @@ abstract: 'Make your attribute(s) tolerant to undef initialization'
 author:
   - 'Cory G Watson <gphat at cpan.org>'
 build_requires:
-  Test::CheckDeps: 0
   Test::Fatal: 0
   Test::Moose: 0
   Test::More: 0.002
@@ -21,4 +20,4 @@ requires:
 resources:
   bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=MooseX-UndefTolerant
   repository: git://git.moose.perl.org/MooseX-UndefTolerant.git
-version: 0.15
+version: 0.16

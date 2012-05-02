@@ -1,5 +1,10 @@
 Revision history for MooseX-UndefTolerant
 
+0.16      2012-05-02 15:13:01 PDT-0700
+    * remove temporary dep, and increase the required version of
+      Dist::Zilla::Plugin::Test::CheckDeps, that now injects this dependency
+      automatically
+
 0.15      2012-05-02 12:56:59 PDT-0700
     * temporarily add missing dep on Test::CheckDeps
 
