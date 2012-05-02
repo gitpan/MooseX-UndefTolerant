@@ -16,11 +16,17 @@ lib/MooseX/UndefTolerant/Class.pm
 lib/MooseX/UndefTolerant/Composite.pm
 lib/MooseX/UndefTolerant/Constructor.pm
 lib/MooseX/UndefTolerant/Role.pm
+t/00-check-deps.t
+t/00-compile.t
 t/00-load.t
 t/basic.t
 t/constructor.t
 t/defaults.t
 t/lib/ConstructorTests.pm
+t/release-changes_has_content.t
+t/release-cpan-changes.t
+t/release-dist-manifest.t
+t/release-distmeta.t
 t/release-eol.t
 t/release-no-tabs.t
 t/release-pod-syntax.t

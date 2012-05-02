@@ -1,6 +1,9 @@
 Revision history for MooseX-UndefTolerant
 
-0.13
+0.14      2012-05-02 09:23:54 PDT-0700
+    * re-release of 0.13 to fix a PAUSE indexing issue.
+
+0.13    2012-03-25
     * unit test improvements - tighter TODO scopes, better diagnostics on
       failure, Test::Moose for cleaner logic
     * fix documentation referencing Moose changes that are still TBD
@@ -32,15 +35,15 @@ Revision history for MooseX-UndefTolerant
     * Added forward compatibility with Moose 1.9900+, but this module still
       works with older Moose too. (Dave Rolsky)
 
-0.07
+0.07    2010-10-21
     * Don't do extra work by exists-ing before defined-ing (Chip Salzenberg)
 
-0.06
+0.06    2010-10-11
     * Add support for immutable classes (Chris Andrews)
     * Be more careful avoiding warnings when the init_arg is undef (Chris Andrews)
     * POD fixups
 
-0.05
+0.05    2010-07-19
     * Avoid warnings from Moose 1.09. (Dave Rolsky)
 
 0.04    2010-01-23
@@ -54,6 +57,6 @@ Revision history for MooseX-UndefTolerant
 0.02    2009-12-02
     * Actually check the value properly, therefore setting it properly
 
-0.01    Date/time
+0.01    2009-12-01
         First version, released on an unsuspecting world.
 

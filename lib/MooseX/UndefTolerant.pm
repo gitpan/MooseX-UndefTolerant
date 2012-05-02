@@ -1,6 +1,6 @@
 package MooseX::UndefTolerant;
 {
-  $MooseX::UndefTolerant::VERSION = '0.13';
+  $MooseX::UndefTolerant::VERSION = '0.14';
 }
 
 use strict;
@@ -61,7 +61,7 @@ MooseX::UndefTolerant - Make your attribute(s) tolerant to undef initialization
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 SYNOPSIS
 
