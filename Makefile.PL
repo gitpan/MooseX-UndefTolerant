@@ -12,9 +12,10 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "Make your attribute(s) tolerant to undef initialization",
   "AUTHOR" => "Cory G Watson <gphat at cpan.org>",
   "BUILD_REQUIRES" => {
+    "Test::CheckDeps" => "0.002",
     "Test::Fatal" => 0,
     "Test::Moose" => 0,
-    "Test::More" => "0.002"
+    "Test::More" => "0.88"
   },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
@@ -26,7 +27,7 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "Moose" => "0.89"
   },
-  "VERSION" => "0.16",
+  "VERSION" => "0.17",
   "test" => {
     "TESTS" => "t/*.t"
   }

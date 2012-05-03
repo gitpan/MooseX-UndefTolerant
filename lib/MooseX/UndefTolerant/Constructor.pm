@@ -1,6 +1,6 @@
 package MooseX::UndefTolerant::Constructor;
 {
-  $MooseX::UndefTolerant::Constructor::VERSION = '0.16';
+  $MooseX::UndefTolerant::Constructor::VERSION = '0.17';
 }
 
 # applied to constructor method metaclass, for Moose < 1.9900

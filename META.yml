@@ -3,13 +3,14 @@ abstract: 'Make your attribute(s) tolerant to undef initialization'
 author:
   - 'Cory G Watson <gphat at cpan.org>'
 build_requires:
+  Test::CheckDeps: 0.002
   Test::Fatal: 0
   Test::Moose: 0
-  Test::More: 0.002
+  Test::More: 0.88
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300015, CPAN::Meta::Converter version 2.120630'
+generated_by: 'Dist::Zilla version 4.300015, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -20,4 +21,199 @@ requires:
 resources:
   bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=MooseX-UndefTolerant
   repository: git://git.moose.perl.org/MooseX-UndefTolerant.git
-version: 0.16
+version: 0.17
+x_Dist_Zilla:
+  plugins:
+    -
+      class: Dist::Zilla::Plugin::Git::NextVersion
+      name: Git::NextVersion
+      version: 1.121010
+    -
+      class: Dist::Zilla::Plugin::GatherDir
+      name: '@Filter/GatherDir'
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::PruneCruft
+      name: '@Filter/PruneCruft'
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::ManifestSkip
+      name: '@Filter/ManifestSkip'
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::MetaYAML
+      name: '@Filter/MetaYAML'
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::License
+      name: '@Filter/License'
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::ExtraTests
+      name: '@Filter/ExtraTests'
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::ExecDir
+      name: '@Filter/ExecDir'
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::ShareDir
+      name: '@Filter/ShareDir'
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::MakeMaker
+      name: '@Filter/MakeMaker'
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::Manifest
+      name: '@Filter/Manifest'
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::TestRelease
+      name: '@Filter/TestRelease'
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::ConfirmRelease
+      name: '@Filter/ConfirmRelease'
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::UploadToCPAN
+      name: '@Filter/UploadToCPAN'
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::InstallGuide
+      name: InstallGuide
+      version: 1.101461
+    -
+      class: Dist::Zilla::Plugin::MetaConfig
+      name: MetaConfig
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::MetaJSON
+      name: MetaJSON
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::MetaResources
+      name: MetaResources
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::Prereqs
+      config:
+        Dist::Zilla::Plugin::Prereqs:
+          phase: test
+          type: requires
+      name: TestRequires
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::Prereqs
+      config:
+        Dist::Zilla::Plugin::Prereqs:
+          phase: runtime
+          type: requires
+      name: RuntimeRequires
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::SurgicalPodWeaver
+      name: SurgicalPodWeaver
+      version: 0.0019
+    -
+      class: Dist::Zilla::Plugin::PkgVersion
+      name: PkgVersion
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::PodSyntaxTests
+      name: PodSyntaxTests
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::NoTabsTests
+      name: NoTabsTests
+      version: 0.01
+    -
+      class: Dist::Zilla::Plugin::EOLTests
+      name: EOLTests
+      version: 0.02
+    -
+      class: Dist::Zilla::Plugin::Test::Compile
+      name: Test::Compile
+      version: 1.112820
+    -
+      class: Dist::Zilla::Plugin::Test::DistManifest
+      name: Test::DistManifest
+      version: 2.0.1
+    -
+      class: Dist::Zilla::Plugin::MetaTests
+      name: MetaTests
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::Test::CPAN::Changes
+      name: Test::CPAN::Changes
+      version: 0.005
+    -
+      class: Dist::Zilla::Plugin::Test::ChangesHasContent
+      name: Test::ChangesHasContent
+      version: 0.005
+    -
+      class: Dist::Zilla::Plugin::Test::CheckDeps
+      name: Test::CheckDeps
+      version: 0.005
+    -
+      class: Dist::Zilla::Plugin::Git::Remote::Check
+      name: Git::Remote::Check
+      version: 0.1.2
+    -
+      class: Dist::Zilla::Plugin::Git::CheckFor::Fixups
+      name: Git::CheckFor::Fixups
+      version: 0.003
+    -
+      class: Dist::Zilla::Plugin::Git::Check
+      name: Git::Check
+      version: 1.121010
+    -
+      class: Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch
+      name: Git::CheckFor::CorrectBranch
+      version: 0.003
+    -
+      class: Dist::Zilla::Plugin::NextRelease
+      name: NextRelease
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::Git::Commit
+      name: Git::Commit
+      version: 1.121010
+    -
+      class: Dist::Zilla::Plugin::Git::Tag
+      name: Git::Tag
+      version: 1.121010
+    -
+      class: Dist::Zilla::Plugin::Git::Push
+      name: Git::Push
+      version: 1.121010
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':InstallModules'
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':IncModules'
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':TestFiles'
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':ExecFiles'
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':ShareFiles'
+      version: 4.300015
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':MainModule'
+      version: 4.300015
+  zilla:
+    class: Dist::Zilla::Dist::Builder
+    config:
+      is_trial: 0
+    version: 4.300015

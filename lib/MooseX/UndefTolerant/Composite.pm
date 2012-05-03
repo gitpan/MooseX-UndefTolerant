@@ -1,6 +1,6 @@
 package MooseX::UndefTolerant::Composite;
 {
-  $MooseX::UndefTolerant::Composite::VERSION = '0.16';
+  $MooseX::UndefTolerant::Composite::VERSION = '0.17';
 }
 use Moose::Role;
 
