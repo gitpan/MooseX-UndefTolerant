@@ -1,6 +1,6 @@
 package MooseX::UndefTolerant::Attribute;
 {
-  $MooseX::UndefTolerant::Attribute::VERSION = '0.17';
+  $MooseX::UndefTolerant::Attribute::VERSION = '0.18';
 }
 use Moose::Role;
 
@@ -14,7 +14,7 @@ around('initialize_instance_slot', sub {
     # If our parameter passed in was undef, remove it from the parameter list...
     # but leave the value unscathed if the attribute's type constraint can
     # handle undef (or doesn't have one, which implicitly means it can)
-    if (not defined $key_name or not defined($params->{$key_name}))
+    if (defined $key_name and not defined($params->{$key_name}))
     {
         my $type_constraint = $self->type_constraint;
         if ($type_constraint and not $type_constraint->check(undef))
@@ -23,7 +23,7 @@ around('initialize_instance_slot', sub {
         }
     }
 
-    # Invoke the real init, as the above line cleared the undef
+    # Invoke the real init, as the above line cleared the undef param value
     $self->$orig(@_)
 });
 
@@ -31,7 +31,7 @@ around('initialize_instance_slot', sub {
 
 # ABSTRACT: Make your attribute(s) tolerant to undef intitialization
 
-
+__END__
 
 =pod
 
@@ -41,7 +41,7 @@ MooseX::UndefTolerant::Attribute - Make your attribute(s) tolerant to undef inti
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 SYNOPSIS
 
@@ -82,7 +82,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__
-

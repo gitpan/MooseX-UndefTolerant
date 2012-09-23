@@ -1,5 +1,9 @@
 Revision history for MooseX-UndefTolerant
 
+0.18      2012-09-23 13:35:06 PDT-0700 (Karen Etheridge)
+   * avoid undef warning by not attempting to manipulate constructor data for
+     init_arg => undef attributes (thanks Damon Tkoch for the report!)
+
 0.17      2012-05-03 14:43:42 PDT-0700
     * re-release to fix dependency issue *again*! :)
 

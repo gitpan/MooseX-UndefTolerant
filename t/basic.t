@@ -1,3 +1,6 @@
+use strict;
+use warnings;
+
 use Test::More;
 use Test::Moose;
 
@@ -12,7 +15,6 @@ has 'bar' => (
     predicate => 'has_bar'
 );
 
-__PACKAGE__->meta->make_immutable;
 }
 
 package main;

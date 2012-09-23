@@ -29,5 +29,9 @@ t/release-dist-manifest.t
 t/release-distmeta.t
 t/release-eol.t
 t/release-no-tabs.t
+t/release-pod-linkcheck.t
+t/release-pod-no404s.t
 t/release-pod-syntax.t
+t/release-test-version.t
 t/roles.t
+t/undef_init_arg.t

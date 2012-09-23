@@ -1,6 +1,6 @@
 package MooseX::UndefTolerant::Class;
 {
-  $MooseX::UndefTolerant::Class::VERSION = '0.17';
+  $MooseX::UndefTolerant::Class::VERSION = '0.18';
 }
 
 # applied to metaclass, for Moose >= 1.9900

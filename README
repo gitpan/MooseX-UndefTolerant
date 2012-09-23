@@ -2,6 +2,9 @@ NAME
     MooseX::UndefTolerant - Make your attribute(s) tolerant to undef
     initialization
 
+VERSION
+    version 0.18
+
 SYNOPSIS
       package My::Class;
 
@@ -40,6 +43,17 @@ DESCRIPTION
     of the attributes they will not be initialized, effectively behaving as
     if you had not provided a value at all.
 
+    You can also apply the 'UndefTolerant' trait to individual attributes.
+    See MooseX::UndefTolerant::Attribute for details.
+
+    There will be no change in behaviour to any attribute with a type
+    constraint that accepts undef values (for example "Maybe" types), as it
+    is presumed that since the type is already "undef tolerant", there is no
+    need to avoid initializing the attribute value with "undef".
+
+    As of Moose 1.9900, this module can also be used in a role, in which
+    case all of that role's attributes will be undef-tolerant.
+
 MOTIVATION
     I often found myself in this quandry:
 
@@ -67,9 +81,9 @@ MOTIVATION
         $class = My:Class->new(bar => 123);
       }
 
-    Or some type of codemulch using ternarys. This module allows you to make
-    your attributes more tolerant of undef so that you can keep the first
-    example: have your cake and eat it too!
+    Or some type of codemulch using ternary conditionals. This module allows
+    you to make your attributes more tolerant of undef so that you can keep
+    the first example: have your cake and eat it too!
 
 PER ATTRIBUTE
     See MooseX::UndefTolerant::Attribute.
@@ -78,8 +92,8 @@ CAVEATS
     This extension does not currently work in immutable classes when
     applying the trait to some (but not all) attributes in the class. This
     is because the inlined constructor initialization code currently lives
-    in Moose::Meta::Method::Constructor, not Moose::Meta::Attribute. The
-    good news is that this is expected to be changing shortly.
+    in Moose::Meta::Class, not Moose::Meta::Attribute. The good news is that
+    this is expected to be changing shortly.
 
 ACKNOWLEDGEMENTS
     Many thanks to the crew in #moose who talked me through this module:

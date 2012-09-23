@@ -1,12 +1,14 @@
 package MooseX::UndefTolerant;
 {
-  $MooseX::UndefTolerant::VERSION = '0.17';
+  $MooseX::UndefTolerant::VERSION = '0.18';
 }
+# git description: v0.17-10-g0601096
+
 
 use strict;
 use warnings;
 
-use Moose qw();
+use Moose 0.89 qw();
 use Moose::Exporter;
 
 use MooseX::UndefTolerant::Attribute;
@@ -51,7 +53,7 @@ Moose::Exporter->setup_import_methods(%metaroles);
 
 # ABSTRACT: Make your attribute(s) tolerant to undef initialization
 
-
+__END__
 
 =pod
 
@@ -61,7 +63,7 @@ MooseX::UndefTolerant - Make your attribute(s) tolerant to undef initialization
 
 =head1 VERSION
 
-version 0.17
+version 0.18
 
 =head1 SYNOPSIS
 
@@ -186,7 +188,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__
-
