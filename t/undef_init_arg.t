@@ -4,7 +4,7 @@ use warnings;
 use Test::More tests => 7;
 use Test::Fatal;
 use Test::Moose;
-use Test::NoWarnings 0.94 ':early';
+use Test::NoWarnings 1.04 ':early';
 
 {
 package Foo;

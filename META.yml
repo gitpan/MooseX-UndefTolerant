@@ -9,7 +9,7 @@ build_requires:
   Test::Fatal: 0
   Test::Moose: 0
   Test::More: 0.88
-  Test::NoWarnings: 0.94
+  Test::NoWarnings: 1.04
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
@@ -22,28 +22,28 @@ name: MooseX-UndefTolerant
 provides:
   MooseX::UndefTolerant:
     file: lib/MooseX/UndefTolerant.pm
-    version: 0.18
+    version: 0.19
   MooseX::UndefTolerant::ApplicationToClass:
     file: lib/MooseX/UndefTolerant/ApplicationToClass.pm
-    version: 0.18
+    version: 0.19
   MooseX::UndefTolerant::ApplicationToRole:
     file: lib/MooseX/UndefTolerant/ApplicationToRole.pm
-    version: 0.18
+    version: 0.19
   MooseX::UndefTolerant::Attribute:
     file: lib/MooseX/UndefTolerant/Attribute.pm
-    version: 0.18
+    version: 0.19
   MooseX::UndefTolerant::Class:
     file: lib/MooseX/UndefTolerant/Class.pm
-    version: 0.18
+    version: 0.19
   MooseX::UndefTolerant::Composite:
     file: lib/MooseX/UndefTolerant/Composite.pm
-    version: 0.18
+    version: 0.19
   MooseX::UndefTolerant::Constructor:
     file: lib/MooseX/UndefTolerant/Constructor.pm
-    version: 0.18
+    version: 0.19
   MooseX::UndefTolerant::Role:
     file: lib/MooseX/UndefTolerant/Role.pm
-    version: 0.18
+    version: 0.19
 requires:
   Moose: 0.89
   Moose::Exporter: 0
@@ -54,7 +54,7 @@ requires:
 resources:
   bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=MooseX-UndefTolerant
   repository: git://git.moose.perl.org/MooseX-UndefTolerant.git
-version: 0.18
+version: 0.19
 x_Dist_Zilla:
   plugins:
     -

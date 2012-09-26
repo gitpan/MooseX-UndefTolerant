@@ -18,7 +18,7 @@ my %WriteMakefileArgs = (
     "Test::Fatal" => 0,
     "Test::Moose" => 0,
     "Test::More" => "0.88",
-    "Test::NoWarnings" => "0.94"
+    "Test::NoWarnings" => "1.04"
   },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
@@ -34,7 +34,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.18",
+  "VERSION" => "0.19",
   "test" => {
     "TESTS" => "t/*.t"
   }

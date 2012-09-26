@@ -1,8 +1,8 @@
 package MooseX::UndefTolerant;
 {
-  $MooseX::UndefTolerant::VERSION = '0.18';
+  $MooseX::UndefTolerant::VERSION = '0.19';
 }
-# git description: v0.17-10-g0601096
+# git description: v0.18-1-g0dc4600
 
 
 use strict;
@@ -63,7 +63,7 @@ MooseX::UndefTolerant - Make your attribute(s) tolerant to undef initialization
 
 =head1 VERSION
 
-version 0.18
+version 0.19
 
 =head1 SYNOPSIS
 
